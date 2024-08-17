@@ -1,4 +1,4 @@
-package com.admafk.union.union_app.entity
+package edu.admafk.union.union_app.entity
 
 import jakarta.persistence.*
 import org.springframework.security.core.userdetails.User
@@ -20,4 +20,8 @@ data class ActivityLog(
 
     @Column(nullable = false)
     val timestamp: LocalDateTime = LocalDateTime.now()
-)
+) {
+    constructor() : this() {
+
+    }
+}

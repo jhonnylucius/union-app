@@ -1,21 +1,21 @@
-package com.admafk.union.union_app.service
+package edu.admafk.union.union_app.service
 
-import com.admafk.union.union_app.entity.ComparisonCorrida
-import com.admafk.union.union_app.repository.ComparisonCorridaRepository
+import edu.admafk.union.union_app.entity.ComparisonCorrida
+import edu.admafk.union.union_app.repository.ComparisonCorridaRepository
 import org.springframework.stereotype.Service
 
 @Service
-class ComparisonCorridaService(private val comparisonCorridaRepository: ComparisonCorridaRepository) {
+class ComparisonCorridaService(private val comparisonCorridaRepository: edu.admafk.union.union_app.repository.ComparisonCorridaRepository) {
 
-    fun findAllComparisonCorridas(): List<ComparisonCorrida> = comparisonCorridaRepository.findAll()
+    fun findAllComparisonCorridas(): List<edu.admafk.union.union_app.entity.ComparisonCorrida> = comparisonCorridaRepository.findAll()
 
-    fun findComparisonCorridaById(id: Long): ComparisonCorrida? = comparisonCorridaRepository.findById(id).orElse(null)
+    fun findComparisonCorridaById(id: Long): edu.admafk.union.union_app.entity.ComparisonCorrida? = comparisonCorridaRepository.findById(id).orElse(null)
 
-    fun findComparisonCorridasByPlayerId(playerId: Long): List<ComparisonCorrida> = comparisonCorridaRepository.findByPlayerId(playerId)
+    fun findComparisonCorridasByPlayerId(playerId: Long): List<edu.admafk.union.union_app.entity.ComparisonCorrida> = comparisonCorridaRepository.findByPlayerId(playerId)
 
-    fun createComparisonCorrida(comparisonCorrida: ComparisonCorrida): ComparisonCorrida = comparisonCorridaRepository.save(comparisonCorrida)
+    fun createComparisonCorrida(comparisonCorrida: edu.admafk.union.union_app.entity.ComparisonCorrida): edu.admafk.union.union_app.entity.ComparisonCorrida = comparisonCorridaRepository.save(comparisonCorrida)
 
-    fun updateComparisonCorrida(id: Long, updatedComparisonCorrida: ComparisonCorrida): ComparisonCorrida? {
+    fun updateComparisonCorrida(id: Long, updatedComparisonCorrida: edu.admafk.union.union_app.entity.ComparisonCorrida): edu.admafk.union.union_app.entity.ComparisonCorrida? {
         val existingComparisonCorrida = comparisonCorridaRepository.findById(id).orElse(null) ?: return null
         val updatedComparisonCorridaEntity = existingComparisonCorrida.copy(
             hero = updatedComparisonCorrida.hero,

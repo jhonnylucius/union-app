@@ -1,4 +1,4 @@
-package com.admafk.union.union_app.entity
+package edu.admafk.union.union_app.entity
 
 import jakarta.persistence.*
 import java.time.LocalDateTime
@@ -16,7 +16,7 @@ data class FavoriteHeroes(
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "heroi_id", nullable = false)
-    val hero: Hero,
+    val hero: edu.admafk.union.union_app.entity.Hero,
 
     @Column(name = "added_at", nullable = false)
     val addedAt: LocalDateTime = LocalDateTime.now()

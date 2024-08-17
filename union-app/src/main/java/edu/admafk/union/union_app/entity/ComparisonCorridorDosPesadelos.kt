@@ -1,4 +1,4 @@
-package com.admafk.union.union_app.entity
+package edu.admafk.union.union_app.entity
 
 import jakarta.persistence.*
 
@@ -11,7 +11,7 @@ data class ComparisonCorridorDosPesadelos(
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "heroi_id", nullable = false)
-    val hero: Hero,
+    val hero: edu.admafk.union.union_app.entity.Hero,
 
     @Column(name = "numero_da_comp", nullable = false)
     val numeroDaComp: Int,
@@ -24,7 +24,7 @@ data class ComparisonCorridorDosPesadelos(
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "pet_id")
-    val pet: Pet? = null,
+    val pet: edu.admafk.union.union_app.entity.Pet? = null,
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "jogador_id", nullable = false)

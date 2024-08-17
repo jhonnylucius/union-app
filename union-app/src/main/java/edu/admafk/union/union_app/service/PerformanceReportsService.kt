@@ -1,21 +1,21 @@
-package com.admafk.union.union_app.service
+package edu.admafk.union.union_app.service
 
-import com.admafk.union.union_app.entity.PerformanceReports
+import edu.admafk.union.union_app.entity.PerformanceReports
 import com.admafk.union.union_app.repository.PerformanceReportsRepository
 import org.springframework.stereotype.Service
 
 @Service
 class PerformanceReportsService(private val performanceReportsRepository: PerformanceReportsRepository) {
 
-    fun findAllPerformanceReports(): List<PerformanceReports> = performanceReportsRepository.findAll()
+    fun findAllPerformanceReports(): List<edu.admafk.union.union_app.entity.PerformanceReports> = performanceReportsRepository.findAll()
 
-    fun findPerformanceReportById(id: Long): PerformanceReports? = performanceReportsRepository.findById(id).orElse(null)
+    fun findPerformanceReportById(id: Long): edu.admafk.union.union_app.entity.PerformanceReports? = performanceReportsRepository.findById(id).orElse(null)
 
-    fun findPerformanceReportsByPlayerId(playerId: Long): List<PerformanceReports> = performanceReportsRepository.findByPlayerId(playerId)
+    fun findPerformanceReportsByPlayerId(playerId: Long): List<edu.admafk.union.union_app.entity.PerformanceReports> = performanceReportsRepository.findByPlayerId(playerId)
 
-    fun createPerformanceReport(performanceReport: PerformanceReports): PerformanceReports = performanceReportsRepository.save(performanceReport)
+    fun createPerformanceReport(performanceReport: edu.admafk.union.union_app.entity.PerformanceReports): edu.admafk.union.union_app.entity.PerformanceReports = performanceReportsRepository.save(performanceReport)
 
-    fun updatePerformanceReport(id: Long, updatedPerformanceReport: PerformanceReports): PerformanceReports? {
+    fun updatePerformanceReport(id: Long, updatedPerformanceReport: edu.admafk.union.union_app.entity.PerformanceReports): edu.admafk.union.union_app.entity.PerformanceReports? {
         val existingPerformanceReport = performanceReportsRepository.findById(id).orElse(null) ?: return null
         val updatedPerformanceReportEntity = existingPerformanceReport.copy(
             reportData = updatedPerformanceReport.reportData,

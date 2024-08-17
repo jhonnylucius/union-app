@@ -1,21 +1,21 @@
-package com.admafk.union.union_app.service
+package edu.admafk.union.union_app.service
 
-import com.admafk.union.union_app.entity.ComparisonCorridorDosPesadelos
-import com.admafk.union.union_app.repository.ComparisonCorridorDosPesadelosRepository
+import edu.admafk.union.union_app.entity.ComparisonCorridorDosPesadelos
+import edu.admafk.union.union_app.repository.ComparisonCorridorDosPesadelosRepository
 import org.springframework.stereotype.Service
 
 @Service
-class ComparisonCorridorDosPesadelosService(private val comparisonCorridorDosPesadelosRepository: ComparisonCorridorDosPesadelosRepository) {
+class ComparisonCorridorDosPesadelosService(private val comparisonCorridorDosPesadelosRepository: edu.admafk.union.union_app.repository.ComparisonCorridorDosPesadelosRepository) {
 
-    fun findAllComparisonCorridorDosPesadelos(): List<ComparisonCorridorDosPesadelos> = comparisonCorridorDosPesadelosRepository.findAll()
+    fun findAllComparisonCorridorDosPesadelos(): List<edu.admafk.union.union_app.entity.ComparisonCorridorDosPesadelos> = comparisonCorridorDosPesadelosRepository.findAll()
 
-    fun findComparisonCorridorDosPesadelosById(id: Long): ComparisonCorridorDosPesadelos? = comparisonCorridorDosPesadelosRepository.findById(id).orElse(null)
+    fun findComparisonCorridorDosPesadelosById(id: Long): edu.admafk.union.union_app.entity.ComparisonCorridorDosPesadelos? = comparisonCorridorDosPesadelosRepository.findById(id).orElse(null)
 
-    fun findComparisonCorridorDosPesadelosByPlayerId(playerId: Long): List<ComparisonCorridorDosPesadelos> = comparisonCorridorDosPesadelosRepository.findByPlayerId(playerId)
+    fun findComparisonCorridorDosPesadelosByPlayerId(playerId: Long): List<edu.admafk.union.union_app.entity.ComparisonCorridorDosPesadelos> = comparisonCorridorDosPesadelosRepository.findByPlayerId(playerId)
 
-    fun createComparisonCorridorDosPesadelos(comparisonCorridorDosPesadelos: ComparisonCorridorDosPesadelos): ComparisonCorridorDosPesadelos = comparisonCorridorDosPesadelosRepository.save(comparisonCorridorDosPesadelos)
+    fun createComparisonCorridorDosPesadelos(comparisonCorridorDosPesadelos: edu.admafk.union.union_app.entity.ComparisonCorridorDosPesadelos): edu.admafk.union.union_app.entity.ComparisonCorridorDosPesadelos = comparisonCorridorDosPesadelosRepository.save(comparisonCorridorDosPesadelos)
 
-    fun updateComparisonCorridorDosPesadelos(id: Long, updatedComparisonCorridorDosPesadelos: ComparisonCorridorDosPesadelos): ComparisonCorridorDosPesadelos? {
+    fun updateComparisonCorridorDosPesadelos(id: Long, updatedComparisonCorridorDosPesadelos: edu.admafk.union.union_app.entity.ComparisonCorridorDosPesadelos): edu.admafk.union.union_app.entity.ComparisonCorridorDosPesadelos? {
         val existingComparisonCorridorDosPesadelos = comparisonCorridorDosPesadelosRepository.findById(id).orElse(null) ?: return null
         val updatedComparisonCorridorDosPesadelosEntity = existingComparisonCorridorDosPesadelos.copy(
             hero = updatedComparisonCorridorDosPesadelos.hero,

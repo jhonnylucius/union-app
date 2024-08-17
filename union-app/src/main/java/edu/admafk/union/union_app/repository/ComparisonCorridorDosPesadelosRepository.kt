@@ -1,10 +1,10 @@
-package com.admafk.union.union_app.repository
+package edu.admafk.union.union_app.repository
 
-import com.admafk.union.union_app.entity.ComparisonCorridorDosPesadelos
+import edu.admafk.union.union_app.entity.ComparisonCorridorDosPesadelos
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.stereotype.Repository
 
 @Repository
-interface ComparisonCorridorDosPesadelosRepository : JpaRepository<ComparisonCorridorDosPesadelos, Long> {
-    fun findByPlayerId(playerId: Long): List<ComparisonCorridorDosPesadelos>
+interface ComparisonCorridorDosPesadelosRepository : JpaRepository<edu.admafk.union.union_app.entity.ComparisonCorridorDosPesadelos, Long> {
+    fun findByPlayerId(playerId: Long): List<edu.admafk.union.union_app.entity.ComparisonCorridorDosPesadelos>
 }

@@ -1,4 +1,4 @@
-package com.admafk.union.union_app.entity
+package edu.admafk.union.union_app.entity
 
 import jakarta.persistence.*
 
@@ -17,4 +17,8 @@ data class User(
 
     @Column(nullable = false, length = 255)
     val senha: String
-)
+) {
+    constructor() : this() {
+
+    }
+}

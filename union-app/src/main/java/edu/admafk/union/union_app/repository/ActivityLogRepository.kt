@@ -1,10 +1,10 @@
-package com.admafk.union.union_app.repository
+package edu.admafk.union.union_app.repository
 
-import com.admafk.union.union_app.entity.ActivityLog
+import edu.admafk.union.union_app.entity.ActivityLog
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.stereotype.Repository
 
 @Repository
-interface ActivityLogRepository : JpaRepository<ActivityLog, Long> {
-    fun findByUserId(userId: Long): List<ActivityLog>
+interface ActivityLogRepository : JpaRepository<edu.admafk.union.union_app.entity.ActivityLog, Long> {
+    fun findByUserId(userId: Long): List<edu.admafk.union.union_app.entity.ActivityLog>
 }

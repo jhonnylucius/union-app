@@ -1,11 +1,11 @@
-package com.admafk.union.union_app.service
+package edu.admafk.union.union_app.service
 
 import com.admafk.union.union_app.entity.SubstitutosHerois
-import com.admafk.union.union_app.repository.SubstitutosHeroisRepository
+import edu.admafk.union.union_app.repository.SubstitutosHeroisRepository
 import org.springframework.stereotype.Service
 
 @Service
-class SubstitutosHeroisService(private val substitutosHeroisRepository: SubstitutosHeroisRepository) {
+class SubstitutosHeroisService(private val substitutosHeroisRepository: edu.admafk.union.union_app.repository.SubstitutosHeroisRepository) {
 
     fun findAllSubstitutosHerois(): List<SubstitutosHerois> = substitutosHeroisRepository.findAll()
 

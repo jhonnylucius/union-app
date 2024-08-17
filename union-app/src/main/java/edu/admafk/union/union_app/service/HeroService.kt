@@ -1,23 +1,23 @@
-package com.admafk.union.union_app.service
+package edu.admafk.union.union_app.service
 
-import com.admafk.union.union_app.entity.Hero
-import com.admafk.union.union_app.repository.HeroRepository
+import edu.admafk.union.union_app.entity.Hero
+import edu.admafk.union.union_app.repository.HeroRepository
 import org.springframework.stereotype.Service
 
 @Service
-class HeroService(private val heroRepository: HeroRepository) {
+class HeroService(private val heroRepository: edu.admafk.union.union_app.repository.HeroRepository) {
 
-    fun findAllHeroes(): List<Hero> = heroRepository.findAll()
+    fun findAllHeroes(): List<edu.admafk.union.union_app.entity.Hero> = heroRepository.findAll()
 
-    fun findHeroById(id: Long): Hero? = heroRepository.findById(id).orElse(null)
+    fun findHeroById(id: Long): edu.admafk.union.union_app.entity.Hero? = heroRepository.findById(id).orElse(null)
 
-    fun findHeroesByClasse(classe: String): List<Hero> = heroRepository.findByClasse(classe)
+    fun findHeroesByClasse(classe: String): List<edu.admafk.union.union_app.entity.Hero> = heroRepository.findByClasse(classe)
 
-    fun findHeroesByFaccao(faccao: String): List<Hero> = heroRepository.findByFaccao(faccao)
+    fun findHeroesByFaccao(faccao: String): List<edu.admafk.union.union_app.entity.Hero> = heroRepository.findByFaccao(faccao)
 
-    fun createHero(hero: Hero): Hero = heroRepository.save(hero)
+    fun createHero(hero: edu.admafk.union.union_app.entity.Hero): edu.admafk.union.union_app.entity.Hero = heroRepository.save(hero)
 
-    fun updateHero(id: Long, updatedHero: Hero): Hero? {
+    fun updateHero(id: Long, updatedHero: edu.admafk.union.union_app.entity.Hero): edu.admafk.union.union_app.entity.Hero? {
         val existingHero = heroRepository.findById(id).orElse(null) ?: return null
         val updatedHeroEntity = existingHero.copy(
             nome = updatedHero.nome,

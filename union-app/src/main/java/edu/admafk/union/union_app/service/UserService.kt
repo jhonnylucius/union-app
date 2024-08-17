@@ -1,14 +1,15 @@
-package com.admafk.union.union_app.service
+package edu.admafk.union.union_app.service
 
-import com.admafk.union.union_app.entity.User
-import com.admafk.union.union_app.repository.UserRepository
+import edu.admafk.union.union_app.entity.User
+import edu.admafk.union.union_app.repository.UserRepository
 import org.springframework.stereotype.Service
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder
+import org.springframework.security.crypto.password.PasswordEncoder
 
 @Service
-class UserService(private val userRepository: UserRepository) {
-
-    private val passwordEncoder = BCryptPasswordEncoder()
+class UserService(
+    private val userRepository: UserRepository,
+    private val passwordEncoder: PasswordEncoder // Injetando PasswordEncoder
+) {
 
     fun findAllUsers(): List<User> = userRepository.findAll()
 

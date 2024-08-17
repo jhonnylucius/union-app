@@ -1,4 +1,4 @@
-package com.admafk.union.union_app.service
+package edu.admafk.union.union_app.service
 
 import com.admafk.union.union_app.entity.ListaHeroisMetas
 import com.admafk.union.union_app.repository.ListaHeroisMetasRepository

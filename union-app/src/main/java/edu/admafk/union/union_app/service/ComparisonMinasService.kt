@@ -1,21 +1,21 @@
-package com.admafk.union.union_app.service
+package edu.admafk.union.union_app.service
 
-import com.admafk.union.union_app.entity.ComparisonMinas
-import com.admafk.union.union_app.repository.ComparisonMinasRepository
+import edu.admafk.union.union_app.entity.ComparisonMinas
+import edu.admafk.union.union_app.repository.ComparisonMinasRepository
 import org.springframework.stereotype.Service
 
 @Service
-class ComparisonMinasService(private val comparisonMinasRepository: ComparisonMinasRepository) {
+class ComparisonMinasService(private val comparisonMinasRepository: edu.admafk.union.union_app.repository.ComparisonMinasRepository) {
 
-    fun findAllComparisonMinas(): List<ComparisonMinas> = comparisonMinasRepository.findAll()
+    fun findAllComparisonMinas(): List<edu.admafk.union.union_app.entity.ComparisonMinas> = comparisonMinasRepository.findAll()
 
-    fun findComparisonMinasById(id: Long): ComparisonMinas? = comparisonMinasRepository.findById(id).orElse(null)
+    fun findComparisonMinasById(id: Long): edu.admafk.union.union_app.entity.ComparisonMinas? = comparisonMinasRepository.findById(id).orElse(null)
 
-    fun findComparisonMinasByPlayerId(playerId: Long): List<ComparisonMinas> = comparisonMinasRepository.findByPlayerId(playerId)
+    fun findComparisonMinasByPlayerId(playerId: Long): List<edu.admafk.union.union_app.entity.ComparisonMinas> = comparisonMinasRepository.findByPlayerId(playerId)
 
-    fun createComparisonMinas(comparisonMinas: ComparisonMinas): ComparisonMinas = comparisonMinasRepository.save(comparisonMinas)
+    fun createComparisonMinas(comparisonMinas: edu.admafk.union.union_app.entity.ComparisonMinas): edu.admafk.union.union_app.entity.ComparisonMinas = comparisonMinasRepository.save(comparisonMinas)
 
-    fun updateComparisonMinas(id: Long, updatedComparisonMinas: ComparisonMinas): ComparisonMinas? {
+    fun updateComparisonMinas(id: Long, updatedComparisonMinas: edu.admafk.union.union_app.entity.ComparisonMinas): edu.admafk.union.union_app.entity.ComparisonMinas? {
         val existingComparisonMinas = comparisonMinasRepository.findById(id).orElse(null) ?: return null
         val updatedComparisonMinasEntity = existingComparisonMinas.copy(
             hero = updatedComparisonMinas.hero,

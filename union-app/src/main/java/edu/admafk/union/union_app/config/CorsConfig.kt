@@ -1,4 +1,4 @@
-package com.admafk.union.union_app.config
+package edu.admafk.union.union_app.config
 
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration

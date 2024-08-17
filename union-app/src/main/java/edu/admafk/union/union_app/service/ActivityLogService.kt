@@ -1,21 +1,21 @@
-package com.admafk.union.union_app.service
+package edu.admafk.union.union_app.service
 
-import com.admafk.union.union_app.entity.ActivityLog
+import edu.admafk.union.union_app.entity.ActivityLog
 import com.admafk.union.union_app.repository.ActivityLogRepository
 import org.springframework.stereotype.Service
 
 @Service
 class ActivityLogService(private val activityLogRepository: ActivityLogRepository) {
 
-    fun findAllActivityLogs(): List<ActivityLog> = activityLogRepository.findAll()
+    fun findAllActivityLogs(): List<edu.admafk.union.union_app.entity.ActivityLog> = activityLogRepository.findAll()
 
-    fun findActivityLogById(id: Long): ActivityLog? = activityLogRepository.findById(id).orElse(null)
+    fun findActivityLogById(id: Long): edu.admafk.union.union_app.entity.ActivityLog? = activityLogRepository.findById(id).orElse(null)
 
-    fun findActivityLogsByUserId(userId: Long): List<ActivityLog> = activityLogRepository.findByUserId(userId)
+    fun findActivityLogsByUserId(userId: Long): List<edu.admafk.union.union_app.entity.ActivityLog> = activityLogRepository.findByUserId(userId)
 
-    fun createActivityLog(activityLog: ActivityLog): ActivityLog = activityLogRepository.save(activityLog)
+    fun createActivityLog(activityLog: edu.admafk.union.union_app.entity.ActivityLog): edu.admafk.union.union_app.entity.ActivityLog = activityLogRepository.save(activityLog)
 
-    fun updateActivityLog(id: Long, updatedActivityLog: ActivityLog): ActivityLog? {
+    fun updateActivityLog(id: Long, updatedActivityLog: edu.admafk.union.union_app.entity.ActivityLog): edu.admafk.union.union_app.entity.ActivityLog? {
         val existingActivityLog = activityLogRepository.findById(id).orElse(null) ?: return null
         val updatedActivityLogEntity = existingActivityLog.copy(
             action = updatedActivityLog.action,

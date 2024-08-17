@@ -1,21 +1,21 @@
-package com.admafk.union.union_app.service
+package edu.admafk.union.union_app.service
 
-import com.admafk.union.union_app.entity.ComparisonCamposDeCaca
-import com.admafk.union.union_app.repository.ComparisonCamposDeCacaRepository
+import edu.admafk.union.union_app.entity.ComparisonCamposDeCaca
+import edu.admafk.union.union_app.repository.ComparisonCamposDeCacaRepository
 import org.springframework.stereotype.Service
 
 @Service
-class ComparisonCamposDeCacaService(private val comparisonCamposDeCacaRepository: ComparisonCamposDeCacaRepository) {
+class ComparisonCamposDeCacaService(private val comparisonCamposDeCacaRepository: edu.admafk.union.union_app.repository.ComparisonCamposDeCacaRepository) {
 
-    fun findAllComparisonCamposDeCaca(): List<ComparisonCamposDeCaca> = comparisonCamposDeCacaRepository.findAll()
+    fun findAllComparisonCamposDeCaca(): List<edu.admafk.union.union_app.entity.ComparisonCamposDeCaca> = comparisonCamposDeCacaRepository.findAll()
 
-    fun findComparisonCamposDeCacaById(id: Long): ComparisonCamposDeCaca? = comparisonCamposDeCacaRepository.findById(id).orElse(null)
+    fun findComparisonCamposDeCacaById(id: Long): edu.admafk.union.union_app.entity.ComparisonCamposDeCaca? = comparisonCamposDeCacaRepository.findById(id).orElse(null)
 
-    fun findComparisonCamposDeCacaByPlayerId(playerId: Long): List<ComparisonCamposDeCaca> = comparisonCamposDeCacaRepository.findByPlayerId(playerId)
+    fun findComparisonCamposDeCacaByPlayerId(playerId: Long): List<edu.admafk.union.union_app.entity.ComparisonCamposDeCaca> = comparisonCamposDeCacaRepository.findByPlayerId(playerId)
 
-    fun createComparisonCamposDeCaca(comparisonCamposDeCaca: ComparisonCamposDeCaca): ComparisonCamposDeCaca = comparisonCamposDeCacaRepository.save(comparisonCamposDeCaca)
+    fun createComparisonCamposDeCaca(comparisonCamposDeCaca: edu.admafk.union.union_app.entity.ComparisonCamposDeCaca): edu.admafk.union.union_app.entity.ComparisonCamposDeCaca = comparisonCamposDeCacaRepository.save(comparisonCamposDeCaca)
 
-    fun updateComparisonCamposDeCaca(id: Long, updatedComparisonCamposDeCaca: ComparisonCamposDeCaca): ComparisonCamposDeCaca? {
+    fun updateComparisonCamposDeCaca(id: Long, updatedComparisonCamposDeCaca: edu.admafk.union.union_app.entity.ComparisonCamposDeCaca): edu.admafk.union.union_app.entity.ComparisonCamposDeCaca? {
         val existingComparisonCamposDeCaca = comparisonCamposDeCacaRepository.findById(id).orElse(null) ?: return null
         val updatedComparisonCamposDeCacaEntity = existingComparisonCamposDeCaca.copy(
             hero = updatedComparisonCamposDeCaca.hero,

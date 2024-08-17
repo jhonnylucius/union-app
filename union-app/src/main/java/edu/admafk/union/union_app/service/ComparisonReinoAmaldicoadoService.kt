@@ -1,21 +1,21 @@
-package com.admafk.union.union_app.service
+package edu.admafk.union.union_app.service
 
-import com.admafk.union.union_app.entity.ComparisonReinoAmaldicoado
-import com.admafk.union.union_app.repository.ComparisonReinoAmaldicoadoRepository
+import edu.admafk.union.union_app.entity.ComparisonReinoAmaldicoado
+import edu.admafk.union.union_app.repository.ComparisonReinoAmaldicoadoRepository
 import org.springframework.stereotype.Service
 
 @Service
-class ComparisonReinoAmaldicoadoService(private val comparisonReinoAmaldicoadoRepository: ComparisonReinoAmaldicoadoRepository) {
+class ComparisonReinoAmaldicoadoService(private val comparisonReinoAmaldicoadoRepository: edu.admafk.union.union_app.repository.ComparisonReinoAmaldicoadoRepository) {
 
-    fun findAllComparisonReinoAmaldicoado(): List<ComparisonReinoAmaldicoado> = comparisonReinoAmaldicoadoRepository.findAll()
+    fun findAllComparisonReinoAmaldicoado(): List<edu.admafk.union.union_app.entity.ComparisonReinoAmaldicoado> = comparisonReinoAmaldicoadoRepository.findAll()
 
-    fun findComparisonReinoAmaldicoadoById(id: Long): ComparisonReinoAmaldicoado? = comparisonReinoAmaldicoadoRepository.findById(id).orElse(null)
+    fun findComparisonReinoAmaldicoadoById(id: Long): edu.admafk.union.union_app.entity.ComparisonReinoAmaldicoado? = comparisonReinoAmaldicoadoRepository.findById(id).orElse(null)
 
-    fun findComparisonReinoAmaldicoadoByPlayerId(playerId: Long): List<ComparisonReinoAmaldicoado> = comparisonReinoAmaldicoadoRepository.findByPlayerId(playerId)
+    fun findComparisonReinoAmaldicoadoByPlayerId(playerId: Long): List<edu.admafk.union.union_app.entity.ComparisonReinoAmaldicoado> = comparisonReinoAmaldicoadoRepository.findByPlayerId(playerId)
 
-    fun createComparisonReinoAmaldicoado(comparisonReinoAmaldicoado: ComparisonReinoAmaldicoado): ComparisonReinoAmaldicoado = comparisonReinoAmaldicoadoRepository.save(comparisonReinoAmaldicoado)
+    fun createComparisonReinoAmaldicoado(comparisonReinoAmaldicoado: edu.admafk.union.union_app.entity.ComparisonReinoAmaldicoado): edu.admafk.union.union_app.entity.ComparisonReinoAmaldicoado = comparisonReinoAmaldicoadoRepository.save(comparisonReinoAmaldicoado)
 
-    fun updateComparisonReinoAmaldicoado(id: Long, updatedComparisonReinoAmaldicoado: ComparisonReinoAmaldicoado): ComparisonReinoAmaldicoado? {
+    fun updateComparisonReinoAmaldicoado(id: Long, updatedComparisonReinoAmaldicoado: edu.admafk.union.union_app.entity.ComparisonReinoAmaldicoado): edu.admafk.union.union_app.entity.ComparisonReinoAmaldicoado? {
         val existingComparisonReinoAmaldicoado = comparisonReinoAmaldicoadoRepository.findById(id).orElse(null) ?: return null
         val updatedComparisonReinoAmaldicoadoEntity = existingComparisonReinoAmaldicoado.copy(
             hero = updatedComparisonReinoAmaldicoado.hero,

@@ -1,19 +1,19 @@
-package com.admafk.union.union_app.service
+package edu.admafk.union.union_app.service
 
-import com.admafk.union.union_app.entity.Pet
+import edu.admafk.union.union_app.entity.Pet
 import com.admafk.union.union_app.repository.PetRepository
 import org.springframework.stereotype.Service
 
 @Service
 class PetService(private val petRepository: PetRepository) {
 
-    fun findAllPets(): List<Pet> = petRepository.findAll()
+    fun findAllPets(): List<edu.admafk.union.union_app.entity.Pet> = petRepository.findAll()
 
-    fun findPetById(id: Long): Pet? = petRepository.findById(id).orElse(null)
+    fun findPetById(id: Long): edu.admafk.union.union_app.entity.Pet? = petRepository.findById(id).orElse(null)
 
-    fun createPet(pet: Pet): Pet = petRepository.save(pet)
+    fun createPet(pet: edu.admafk.union.union_app.entity.Pet): edu.admafk.union.union_app.entity.Pet = petRepository.save(pet)
 
-    fun updatePet(id: Long, updatedPet: Pet): Pet? {
+    fun updatePet(id: Long, updatedPet: edu.admafk.union.union_app.entity.Pet): edu.admafk.union.union_app.entity.Pet? {
         val existingPet = petRepository.findById(id).orElse(null) ?: return null
         val updatedPetEntity = existingPet.copy(
             nome = updatedPet.nome,

@@ -1,4 +1,4 @@
-package com.admafk.union.union_app.dto
+package edu.admafk.union.union_app.dto
 
 data class PlayerHeroDTO(
     val id: Long?,

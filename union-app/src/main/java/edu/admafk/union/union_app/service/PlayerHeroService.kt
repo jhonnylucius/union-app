@@ -1,11 +1,11 @@
-package com.admafk.union.union_app.service
+package edu.admafk.union.union_app.service
 
 import com.admafk.union.union_app.entity.PlayerHero
-import com.admafk.union.union_app.repository.PlayerHeroRepository
+import edu.admafk.union.union_app.repository.PlayerHeroRepository
 import org.springframework.stereotype.Service
 
 @Service
-class PlayerHeroService(private val playerHeroRepository: PlayerHeroRepository) {
+class PlayerHeroService(private val playerHeroRepository: edu.admafk.union.union_app.repository.PlayerHeroRepository) {
 
     fun findAllPlayerHeroes(): List<PlayerHero> = playerHeroRepository.findAll()
 
