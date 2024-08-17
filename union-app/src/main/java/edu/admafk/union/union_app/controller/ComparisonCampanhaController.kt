@@ -1,6 +1,6 @@
-package com.admafk.union.union_app.controller
+package edu.admafk.union.union_app.controller
 
-import com.admafk.union.union_app.entity.ComparisonCampanha
+import edu.admafk.union.union_app.entity.ComparisonCampanha
 import com.admafk.union.union_app.service.ComparisonCampanhaService
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
@@ -10,31 +10,31 @@ import org.springframework.web.bind.annotation.*
 class ComparisonCampanhaController(private val comparisonCampanhaService: ComparisonCampanhaService) {
 
     @GetMapping
-    fun getAllComparisonCampanhas(): ResponseEntity<List<ComparisonCampanha>> {
+    fun getAllComparisonCampanhas(): ResponseEntity<List<edu.admafk.union.union_app.entity.ComparisonCampanha>> {
         val comparisonCampanhas = comparisonCampanhaService.findAllComparisonCampanhas()
         return ResponseEntity.ok(comparisonCampanhas)
     }
 
     @GetMapping("/{id}")
-    fun getComparisonCampanhaById(@PathVariable id: Long): ResponseEntity<ComparisonCampanha> {
+    fun getComparisonCampanhaById(@PathVariable id: Long): ResponseEntity<edu.admafk.union.union_app.entity.ComparisonCampanha> {
         val comparisonCampanha = comparisonCampanhaService.findComparisonCampanhaById(id) ?: return ResponseEntity.notFound().build()
         return ResponseEntity.ok(comparisonCampanha)
     }
 
     @GetMapping("/player/{playerId}")
-    fun getComparisonCampanhasByPlayerId(@PathVariable playerId: Long): ResponseEntity<List<ComparisonCampanha>> {
+    fun getComparisonCampanhasByPlayerId(@PathVariable playerId: Long): ResponseEntity<List<edu.admafk.union.union_app.entity.ComparisonCampanha>> {
         val comparisonCampanhas = comparisonCampanhaService.findComparisonCampanhasByPlayerId(playerId)
         return ResponseEntity.ok(comparisonCampanhas)
     }
 
     @PostMapping
-    fun createComparisonCampanha(@RequestBody comparisonCampanha: ComparisonCampanha): ResponseEntity<ComparisonCampanha> {
+    fun createComparisonCampanha(@RequestBody comparisonCampanha: edu.admafk.union.union_app.entity.ComparisonCampanha): ResponseEntity<edu.admafk.union.union_app.entity.ComparisonCampanha> {
         val newComparisonCampanha = comparisonCampanhaService.createComparisonCampanha(comparisonCampanha)
         return ResponseEntity.ok(newComparisonCampanha)
     }
 
     @PutMapping("/{id}")
-    fun updateComparisonCampanha(@PathVariable id: Long, @RequestBody comparisonCampanha: ComparisonCampanha): ResponseEntity<ComparisonCampanha> {
+    fun updateComparisonCampanha(@PathVariable id: Long, @RequestBody comparisonCampanha: edu.admafk.union.union_app.entity.ComparisonCampanha): ResponseEntity<edu.admafk.union.union_app.entity.ComparisonCampanha> {
         val updatedComparisonCampanha = comparisonCampanhaService.updateComparisonCampanha(id, comparisonCampanha) ?: return ResponseEntity.notFound().build()
         return ResponseEntity.ok(updatedComparisonCampanha)
     }
