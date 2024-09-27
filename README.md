@@ -332,7 +332,7 @@ Union-App foi projetado para ser uma ferramenta robusta que facilita a gestão d
 Antes de começar, certifique-se de que você atenda aos seguintes requisitos:
 
 - **Kotlin** (ultima versão)
-- **Maven** (para gerenciar dependências do projeto)
+- **Gradle** (para gerenciar dependências do projeto)
 - **Node.js & npm** (para o frontend Angular)
 - **Docker & Docker Compose** (para containerizar a aplicação)
 - **Conta no Amazon S3** (para armazenamento de imagens)
