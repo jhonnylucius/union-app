@@ -307,16 +307,16 @@ Com esses links, você terá todas as documentações oficiais das ferramentas e
 
 # 🖥️ O PROJETO
 
-# ProjectAFKStrategist
+# Union-App
 Projeto para praticar programação em java e integrações de serviços e tecnologias, usando a criação de um app para a Comunidade de Jogadores do jogo AFK Arena.
 
 # AFKStrategist
 
-AFKStrategist é uma aplicação que permite aos membros da guilda gerenciar e analisar heróis, configurar suas equipes e realizar outras operações offline após o primeiro download. Este projeto é desenvolvido usando Spring Boot para o backend, MariaDB na Cloud Cluster sendo nosso banco de dados e Amazon S3 para armazenamento de imagens.
+Union-App é uma aplicação que permite aos membros da guilda gerenciar e analisar heróis, configurar suas equipes e realizar outras operações offline após o primeiro download. Este projeto é desenvolvido usando Spring Boot para o backend, MariaDB na Cloud Cluster sendo nosso banco de dados e Amazon S3 para armazenamento de imagens.
 
 ## 📋 Descrição
 
-AFKStrategist foi projetado para ser uma ferramenta robusta que facilita a gestão de heróis e configurações de usuários. Ele oferece a capacidade de operar offline após um download inicial, garantindo que as informações estejam sempre disponíveis para os usuários, mesmo sem conexão com a internet.
+Union-App foi projetado para ser uma ferramenta robusta que facilita a gestão de heróis e configurações de usuários. Ele oferece a capacidade de operar offline após um download inicial, garantindo que as informações estejam sempre disponíveis para os usuários, mesmo sem conexão com a internet.
 
 ## 🛠️ Funcionalidades
 
@@ -343,8 +343,8 @@ Antes de começar, certifique-se de que você atenda aos seguintes requisitos:
 1. **Clone o Repositório:**
 
    ```bash
-   git clone https://github.com/seu-usuario/afkstrategist.git
-   cd afkstrategist
+   git clone https://github.com/seu-usuario/Union-App.git
+   cd Union-App
 
    Backend - Spring Boot:
 
