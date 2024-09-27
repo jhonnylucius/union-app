@@ -8,8 +8,9 @@ Este guia vai te ajudar a iniciar um projeto Spring Boot do zero, configurar as 
 
 ## 🔧 Tecnologias Utilizadas
 
-### 1. <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="40px"/> **Java**
-Java é a linguagem de programação principal usada no desenvolvimento do backend do projeto.
+### 1. <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" width="40px"/> **Kotlin**
+Kotlin é a linguagem de programação principal usada no desenvolvimento do backend do projeto.
+
 
 ---
 
@@ -121,13 +122,13 @@ Dica: Por enquanto, deixe o arquivo baixado no seu diretório local. Vamos prime
 </BR>
 🚀 Instalando as Ferramentas Essenciais</BR>
 </BR>
-3. Java Development Kit (JDK) 17</BR>
+3. Kotlin </BR>
 </BR>
-Baixe e instale o JDK 17 do site oficial.</BR>
+Baixe e instale do site oficial.</BR>
 </BR>
 Configuração da variável de ambiente: Certifique-se de que a variável JAVA_HOME está configurada corretamente no sistema.</BR>
 </BR>
-📚 Documentação da API Java 17 ao final
+📚 Documentação da API Kotlin ao final
 </BR>
 
 4. IntelliJ IDEA ou VS Code</BR>
@@ -261,8 +262,8 @@ Aqui estão os links de documentação para as tecnologias e ferramentas mencion
 
 ### 📚 Documentação das Ferramentas Utilizadas:
 
-1. **[Java 17](https://docs.oracle.com/en/java/javase/17/docs/)**
-   - Documentação da API Java SE 17.
+1. **[Kotlin](https://kotlinlang.org/docs/home.html)**
+   - Documentação oficial do Kotlin.
 
 2. **[Spring Framework](https://spring.io/projects/spring-framework)**
    - Página oficial do Spring Framework.
@@ -330,7 +331,7 @@ AFKStrategist foi projetado para ser uma ferramenta robusta que facilita a gest�
 
 Antes de começar, certifique-se de que você atenda aos seguintes requisitos:
 
-- **Java 17** (ou superior)
+- **Kotlin** (ultima versão)
 - **Maven** (para gerenciar dependências do projeto)
 - **Node.js & npm** (para o frontend Angular)
 - **Docker & Docker Compose** (para containerizar a aplicação)
